@@ -28,7 +28,7 @@ function User({ id, email, first_name, last_name, avatar }: UserProps) {
       _hover={{ "box-shadow": "0px 0px 17px rgb(0 0 0 / 30%)" }}
     >
       <CardHeader mb={4}>
-        <Avatar src={avatar}></Avatar>
+        <Avatar src={avatar} name={first_name}></Avatar>
       </CardHeader>
       <CardBody>
         <Stack spacing={3}>

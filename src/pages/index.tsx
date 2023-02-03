@@ -51,6 +51,7 @@ export default function Home() {
       <Head>
         <title>React Test</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="This serves a react skill test output." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
