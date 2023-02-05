@@ -1,9 +1,9 @@
 .main {
   display: flex;
   padding: 6rem;
-  min-height: 100vh;
+  min-height: calc(100vh - 6rem);
   max-width: 1080px;
-  margin: auto;
+  margin: auto;  
 }
 
 .description {
@@ -16,4 +16,11 @@
   z-index: 2;
   font-family: var(--font-mono);
   margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .main {
+    padding: 1.5rem;
+    min-height: 100vh;
+  }
 }

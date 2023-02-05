@@ -1,9 +1,9 @@
+import {  useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { Button, SimpleGrid} from "@chakra-ui/react";
-import {  useEffect, useRef, useState } from "react";
 import { usersAPI } from "@/services/users";
-import User from "@/components/User";
 
 interface Query {
   page: number;
@@ -16,6 +16,8 @@ interface Users {
   last_name: string;
   avatar: string;
 }
+
+const User = dynamic(() => import('@/components/User'))
 
 export default function Home() {
   const didMount = useRef(null)
