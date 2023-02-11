@@ -35,13 +35,10 @@ export default function Home() {
     }
     
     (async () => {
-      if(loading) {
-        await fetchData()
-      } else if (didMount.current && loading) {
-        await fetchData()
-      }
+      await fetchData()
     })();
-  }, [query, loading])
+    
+  }, [query])
   
   const loadMore = () => {
     setLoading(true);
