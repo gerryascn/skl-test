@@ -1,4 +1,4 @@
-import {  useEffect, useRef, useState } from "react";
+import {  useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
@@ -20,7 +20,6 @@ interface Users {
 const User = dynamic(() => import('@/components/User'))
 
 export default function Home() {
-  const didMount = useRef(null)
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState<Query>({ page: 1 });
   const [users, setUsers] = useState(Array<Users>);
